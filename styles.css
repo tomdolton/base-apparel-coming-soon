@@ -1,0 +1,75 @@
+:root {
+  --clr-red-primary: hsl(0, 36%, 70%);
+  --clr-red-secondary: hsl(0, 93%, 68%);
+  --clr-red-gray: hsl(0, 6%, 24%);
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-size: 14px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Nav */
+nav{
+  padding: 1em 2em;
+}
+.logo {
+  width: 100px;
+}
+
+
+/* Image */
+.main__image {
+  width: 100%;
+  margin-bottom: 3em;
+}
+
+
+section {
+  text-align: center;
+}
+
+.main__hero {
+  padding: 0 30px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--clr-red-gray);
+  text-transform: uppercase;
+  line-height: 1.2;
+  letter-spacing: 10px;
+  font-weight: 400;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+h1 span {
+  color: var(--clr-red-primary);
+  font-weight: 300;
+}
+
+p {
+  color: var(--clr-red-primary);
+  line-height: 1.6;
+  max-width: 300px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+
+/* Form */
+input {
+  border-color: var(--clr-red-primary);
+  border-radius: 50px;
+  width: 100%;
+  height: 50px;
+  color: var(--clr-red-primary);
+  border-style: solid;
+}
