@@ -14,28 +14,42 @@ body {
   font-family: 'Josefin Sans', sans-serif;
 }
 
-/* Nav */
-nav{
-  padding: 1em 2em;
-}
-.logo {
-  width: 100px;
-}
-
-
-/* Image */
-.main__image {
-  width: 100%;
-  margin-bottom: 3em;
-}
-
-
 section {
   text-align: center;
 }
 
-.main__hero {
+img {
+  max-width: 100%;
+
+}
+
+/* Nav */
+nav {
+  padding: 1em 2em;
+}
+
+.logo {
+  width: 100px;
+}
+
+/* Image */
+.hero-mobile {
+  width: 100%;
+  margin-bottom: 3em;
+}
+
+.hero-desktop {
+  display: none;
+}
+
+
+
+.main {
   padding: 0 30px;
+  background-image: linear-gradient(hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+.main__hero * {
+  max-width: 400px;
 }
 
 h1 {
@@ -65,11 +79,117 @@ p {
 
 
 /* Form */
+form {
+  color: var(--clr-red-primary);
+  position: relative;
+  margin: 0 auto;
+}
+
 input {
   border-color: var(--clr-red-primary);
   border-radius: 50px;
+  background-color: transparent;
   width: 100%;
-  height: 50px;
-  color: var(--clr-red-primary);
+  height: 60px;
   border-style: solid;
+  border-width: 1px;
+  margin-bottom: 10em;
+}
+
+input::placeholder {
+  color: var(--clr-red-primary);
+  padding-left: 2em;
+  font-size: 1rem;
+}
+
+button {
+  background-image: linear-gradient(135deg, rgb(248, 191, 191), hsl(0, 74%, 74%));
+  width: 80px;
+  height: 60px;
+  border-radius: 50px;
+  position: absolute;
+  right: 0;
+  box-shadow: 0 15px 15px rgba(248, 191, 191, 0.4);
+}
+
+footer {
+  background: hsl(0, 100%, 98%);
+  padding: 5em 0 1em;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Large Screens */
+@media (min-width: 780px) {
+
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 29fr 21fr;
+    grid-template-areas: 
+      "nav image"
+      "main image"
+      "footer footer";
+      min-height: 100vh;
+
+  }
+
+  nav {
+    grid-area: nav;
+    padding-left: 20%;
+  }
+  
+
+
+
+  .main__image {
+    grid-area: image;
+
+  }
+  
+  .main {
+    background: url(images/bg-pattern-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0;
+  }
+
+  .main__hero {
+    grid-area: main;
+    text-align: left;
+    padding-left: 20%;
+
+  }
+
+  h1, p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero-mobile {
+    display: none;
+  }
+
+  .hero-desktop {
+    display: inline-block;
+    width: 100%;
+  }
+
+
+  footer {
+    grid-area: footer;
+    align-self: end;
+    background-color: white;
+  }
+
+  
+
 }
